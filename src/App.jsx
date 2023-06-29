@@ -1,5 +1,5 @@
 import './App.css'
-import {Content} from "./Content.jsx"
+import {Content} from "./components/Content.jsx"
 
 function App() {
   return (
