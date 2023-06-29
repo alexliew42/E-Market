@@ -1,0 +1,25 @@
+#product-images {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+#all-p {
+  text-align: center;
+}
+
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  transition: 0.3s;
+  max-width: 400px;
+}
+
+#index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
