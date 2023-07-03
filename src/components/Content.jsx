@@ -4,6 +4,7 @@ import {ProductsIndex} from "./ProductsIndex.jsx"
 export function Content() {
 
   const [products, setProducts] = useState([])
+  const [currentProduct, setCurrentProduct] = useState([])
   
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -11,9 +12,14 @@ export function Content() {
       .then(json=>setProducts(json))
   }, [])    
 
+  const handleShowProduct = (product) => {
+    console.log(product)
+    setCurrentProduct(product)
+  }
+
   return (
     <div>
-      <ProductsIndex products={products}/>
+      <ProductsIndex products={products} onShowProduct={handleShowProduct}/>
     </div>
   );
 }

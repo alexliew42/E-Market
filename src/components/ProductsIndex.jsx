@@ -11,6 +11,7 @@ export function ProductsIndex(props) {
             <img id="product-images" src={`${product.image}`} />
             <h3>{product.title}</h3>
             <p>{product.description}</p>
+            <button onClick={() => props.onShowProduct(product)}>Click here</button>
           </div>
         </div>
 ))}
