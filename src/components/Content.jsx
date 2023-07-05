@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 import {ProductsIndex} from "./ProductsIndex.jsx"
+import {Modal} from "./Modal.jsx"
 
 export function Content() {
 
@@ -20,6 +21,9 @@ export function Content() {
   return (
     <div>
       <ProductsIndex products={products} onShowProduct={handleShowProduct}/>
+      <Modal show={true}>
+        
+      </Modal>
     </div>
   );
 }
