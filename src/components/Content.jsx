@@ -22,7 +22,7 @@ export function Content() {
     <div>
       <ProductsIndex products={products} onShowProduct={handleShowProduct}/>
       <Modal show={true}>
-        
+        <h1>test</h1>
       </Modal>
     </div>
   );
