@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./Modal.css";
+import "../Modal.css";
 
 export function Modal(props) {
   if (props.show) {
