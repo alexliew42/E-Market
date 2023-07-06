@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react"
 import {ProductsIndex} from "./ProductsIndex.jsx"
 import {Modal} from "./Modal.jsx"
+import {ProductsShow} from "./ProductsShow.jsx"
 
 export function Content() {
 
@@ -29,7 +30,7 @@ export function Content() {
     <div>
       <ProductsIndex products={products} onShowProduct={handleShowProduct}/>
       <Modal show={isProductVisible} onClose={handleClose}> 
-        <h1>test</h1>
+        <ProductsShow product={currentProduct}/>
       </Modal>
     </div>
   );
