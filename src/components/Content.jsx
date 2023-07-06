@@ -6,6 +6,7 @@ export function Content() {
 
   const [products, setProducts] = useState([])
   const [currentProduct, setCurrentProduct] = useState([])
+  const [isProductVisible, setIsProductVisible] = useState(false)
   
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -15,13 +16,19 @@ export function Content() {
 
   const handleShowProduct = (product) => {
     console.log(product)
+    setIsProductVisible(true)
     setCurrentProduct(product)
+  }
+
+  const handleClose = () => {
+    console.log("closing")
+    setIsProductVisible(false)
   }
 
   return (
     <div>
       <ProductsIndex products={products} onShowProduct={handleShowProduct}/>
-      <Modal show={true}>
+      <Modal show={isProductVisible} onClose={handleClose}> 
         <h1>test</h1>
       </Modal>
     </div>
